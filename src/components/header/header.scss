@@ -1,0 +1,51 @@
+@import "./../../assets/style/variable";
+
+.header {
+  height: $headHeight;
+  background: $bg;
+
+  .l-nav {
+    width: $headHeight;
+    height: $headHeight;
+
+    .l-nav-btn {
+      width: $headHeight;
+      height: $headHeight;
+      line-height: $headHeight;
+      text-align: center;
+      font-size: 28px;
+      color: #fff;
+    }
+  }
+
+  .search-btn {
+    width: $headHeight;
+    height: $headHeight;
+    line-height: $headHeight;
+    text-align: center;
+    font-size: 28px;
+    color: #fff;
+  }
+
+  .h-nav-list {
+
+    .h-nav {
+      width: $headHeight;
+      height: $headHeight;
+
+      a {
+        width: $headHeight;
+        height: $headHeight;
+        line-height: $headHeight;
+        text-align: center;
+        font-size: 24px;
+        color: #fff;
+        opacity: 0.8;
+
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
