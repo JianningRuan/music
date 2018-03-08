@@ -34,19 +34,22 @@
       }
     },
     mounted(){
-      this.$nextTick( ()=>{
+      setTimeout(()=>{
         this._initParam();
         this._initSlider();
         if (this.autoPlay){
           this._play();
         }
-        window.addEventListener('resize', ()=>{
-          if (!this.slider){
-            return
-          }
-          this._initParam(true);
-          this.slider.refresh()
-        })
+      }, 20)
+      this.$nextTick( ()=>{
+
+      })
+      window.addEventListener('resize', ()=>{
+        if (!this.slider){
+          return
+        }
+        this._initParam(true);
+        this.slider.refresh()
       })
     },
     methods: {
@@ -57,10 +60,12 @@
         this.sliderDom = this.$refs.sliderWrapper;
         let wrapperWidth = 0;
         this.sliderChildren = this.sliderDom.children;
+        console.log(this.sliderChildren)
         for (let i = 0, sLength = this.sliderChildren.length; i < sLength; i++){
           addClass(this.sliderChildren[i], 'slider-item');
           this.sliderChildren[i].style.width = sliderBoxWidth + 'px';
           wrapperWidth += sliderBoxWidth
+          console.log(wrapperWidth)
         }
         //因为如果循环播放的话，前后各增加一个子元素
         if (this.loop && !isResize){
