@@ -1,25 +1,32 @@
 <template>
-  <div class="main">
-    <div class="m-nav">
-      <router-link to="/music/find">发现</router-link>
-      <router-link to="/music/find">我的</router-link>
-      <router-link to="/music/find">电台</router-link>
+  <div class="main flex1">
+    <div class="m-nav flex justify-center">
+      <router-link to="/music/find">
+        <div class="nav-item active">发现</div>
+      </router-link>
+      <router-link to="/music/find">
+        <div class="nav-item">我的</div>
+      </router-link>
+      <router-link to="/music/find">
+        <div class="nav-item">电台</div>
+      </router-link>
     </div>
     <router-view></router-view>
   </div>
 </template>
 <script>
-        export default {
-                data() {
-                        return {}
-                },
-                components: {},
-                created() {
-                },
-                mounted() {
-                },
-                watch: {},
-                filters: {},
-                methods: {}
-        }
+  import './music.scss'
+  export default {
+    data() {
+      return {}
+    },
+    components: {},
+    created() {
+    },
+    mounted() {
+    },
+    watch: {},
+    filters: {},
+    methods: {}
+  }
 </script>
