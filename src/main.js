@@ -4,6 +4,7 @@ import router from './router'
 import axios from 'axios'
 
 import { fetch, post} from './api/http'
+import Api from './api/Api'
 
 // 快速点击
 import fastClick from 'fastclick'
@@ -21,6 +22,7 @@ Vue.config.productionTip = false;
 //Vue.prototype.$ajax = axios
 Vue.prototype.$fetch = fetch;
 Vue.prototype.$post = post;
+Vue.prototype.$Api = Api;
 
 /* eslint-disable no-new */
 new Vue({

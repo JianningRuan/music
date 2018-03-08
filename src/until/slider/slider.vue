@@ -50,7 +50,7 @@
       })
     },
     methods: {
-      _initParam(){
+      _initParam(isResize){
         this.sliderBox = this.$refs.sliderBox;
         let sliderBoxWidth = this.sliderBox.clientWidth;
         //获取轮播图的子元素

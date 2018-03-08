@@ -1,4 +1,6 @@
-
+/**
+ * Created by Administrator on 2018/3/8.
+ */
 //添加class名
 export function addClass(el, className) {
   let isHasClass = hasClass(el, className);
