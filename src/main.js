@@ -3,6 +3,10 @@ import App from './App'
 import router from './router'
 import axios from 'axios'
 
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
+Vue.use(MintUI);
+
 import { fetch, post} from './api/http'
 import Api from './api/Api'
 
