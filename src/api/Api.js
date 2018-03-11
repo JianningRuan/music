@@ -5,6 +5,7 @@
 let baseUrl = '';
 let Api = {
   getBanner: `/banner`,
+  getPersonalized: `/personalized`,
   getRecommend: `/dj/recommend`
 };
 export default Api;

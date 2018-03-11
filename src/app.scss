@@ -1,3 +1,5 @@
+@import "assets/style/variable";
+
 * { padding: 0; margin: 0;}
 
 a {
@@ -8,9 +10,11 @@ a {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #666;
 }
+
+.fl { float: left;}
+.fr { float: right;}
 
 .flex {
   display: flex;
@@ -26,4 +30,28 @@ a {
 }
 .justify-center {
   justify-content: center;
+}
+.flex-align-center {
+  align-items: center;
+}
+
+
+
+.box {
+
+  .box-tit {
+    height: 48px;
+    line-height: 48px;
+    font-size: 14px;
+    color: $titColor;
+
+    .t-span {
+      width: 4px;
+      height: 24px;
+      margin-right: 10px;
+      background: $bg;
+    }
+
+    .arrow-icon {}
+  }
 }

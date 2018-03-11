@@ -1,2 +1,43 @@
-.banner { height: 120px;}
-.banner img { width: 100%;}
+.banner {
+  height: 140px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.disc-wrapper {
+
+  .disc-item {
+    width: 33.3%;
+    padding-right: 2px;
+    box-sizing: border-box;
+
+    &:nth-child(3n){
+      margin-right: 0;
+    }
+
+    .disc-pic {
+      width: 100%;
+      position: relative;
+
+      img {
+        width: 100%;
+      }
+
+      .disc-l-num {
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: right;
+      }
+    }
+
+    .disc-name {
+      height: 38px;
+      line-height: 18px;
+      font-size: 12px;
+      overflow: hidden;
+    }
+  }
+}

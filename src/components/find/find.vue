@@ -7,13 +7,25 @@
         </mt-swipe-item>
       </mt-swipe>
     </div>
-
-    <!--<slider :loop="true" :autoPlay="true">
-      <div v-for="bannerItem in banner">
-        <img :src="bannerItem.pic" />
+    <div class="box">
+      <div class="box-tit flex flex-align-center">
+        <span class="t-span"></span>
+        推荐歌单
+        <span class="arrow-icon iconfont"></span>
       </div>
-    </slider>-->
-    aaa
+      <div class="box-cont disc-wrapper">
+        <div class="disc-item fl" v-for="discItem in disc">
+          <div class="disc-pic">
+            <img :src="discItem.picUrl"/>
+            <div class="disc-l-num">{{discItem.playCount}}</div>
+          </div>
+          <div class="disc-name">{{discItem.name}}</div>
+        </div>
+      </div>
+    </div>
+    <div>
+
+    </div>
   </div>
 </template>
 <script type="text/ecmascript-6">
@@ -23,17 +35,25 @@
   export default {
     data() {
       return {
-        banner: []
+        banner: [],
+        disc: []
       }
     },
     components: {},
     created() {
       this.$fetch(this.$Api.getBanner).then((res)=>{
        console.log('结果', res);
-        if (res.code == '200') {
+        if (res.code == 200) {
           this.banner = res.banners;
         }
        })
+
+      this.$fetch(this.$Api.getPersonalized).then((res)=>{
+        console.log(res);
+        if (res.code == 200) {
+          this.disc = res.result;
+        }
+      })
     },
     mounted() {
     },
