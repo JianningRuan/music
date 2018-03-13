@@ -1,5 +1,5 @@
 <template>
-  <div class="aa">
+  <div>
     <div class="banner">
       <mt-swipe :auto="4000">
         <mt-swipe-item v-for="bannerItem in banner" :key="bannerItem.targetId">
@@ -13,7 +13,7 @@
         推荐歌单
         <span class="arrow-icon iconfont"></span>
       </div>
-      <div class="box-cont disc-wrapper">
+      <div class="box-cont box-list-wrapper disc-wrapper">
         <div class="disc-item fl" v-for="discItem in disc">
           <div class="disc-pic">
             <img :src="discItem.picUrl"/>
@@ -30,8 +30,6 @@
 </template>
 <script type="text/ecmascript-6">
   import './find.scss'
-  // import slider from './../../until/slider/slider'
-  //import { Swipe, SwipeItem } from 'mint-ui'
   export default {
     data() {
       return {

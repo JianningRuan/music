@@ -9,13 +9,6 @@
 .disc-wrapper {
 
   .disc-item {
-    width: 33.3%;
-    padding-right: 2px;
-    box-sizing: border-box;
-
-    &:nth-child(3n){
-      margin-right: 0;
-    }
 
     .disc-pic {
       width: 100%;
