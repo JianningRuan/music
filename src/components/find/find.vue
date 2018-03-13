@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div class="banner">
+    <div class="banner" ref="banner">
       <mt-swipe :auto="4000">
         <mt-swipe-item v-for="bannerItem in banner" :key="bannerItem.targetId">
-          <img :src="bannerItem.pic" />
+          <img ref="bannerImg" :src="bannerItem.pic" />
         </mt-swipe-item>
       </mt-swipe>
     </div>
@@ -14,7 +14,7 @@
         <span class="arrow-icon iconfont"></span>
       </div>
       <div class="box-cont box-list-wrapper disc-wrapper">
-        <div class="disc-item fl" v-for="discItem in disc">
+        <div class="disc-item" v-for="discItem in disc" v-on:click="goDetail(discItem)">
           <div class="disc-pic">
             <img :src="discItem.picUrl"/>
             <div class="disc-l-num">{{discItem.playCount}}</div>
@@ -40,14 +40,16 @@
     components: {},
     created() {
       this.$fetch(this.$Api.getBanner).then((res)=>{
-       console.log('结果', res);
         if (res.code == 200) {
           this.banner = res.banners;
         }
-       })
+       });
 
-      this.$fetch(this.$Api.getPersonalized).then((res)=>{
-        console.log(res);
+      let getRecommendParams = {
+        'offset': 0,
+        'limit': 6
+      };
+      this.$fetch(this.$Api.getPersonalized, getRecommendParams).then((res)=>{
         if (res.code == 200) {
           this.disc = res.result;
         }
@@ -57,6 +59,10 @@
     },
     watch: {},
     filters: {},
-    methods: {}
+    methods: {
+      goDetail(item) {
+        console.log(item)
+      }
+    }
   }
 </script>

@@ -6,6 +6,7 @@ let baseUrl = '';
 let Api = {
   getBanner: `/banner`,
   getPersonalized: `/personalized`,
-  getRecommend: `/dj/recommend`
+  getRecommend: `/dj/recommend`,
+  getTopArtists: `/top/artists`
 };
 export default Api;

@@ -66,9 +66,9 @@ Axios.interceptors.response.use((res)=>{
  * @param data
  * @returns {Promise}
  */
-export function fetch(url, params={}) {
+export function fetch(url, params) {
   return new Promise((resolve,reject)=>{
-    Axios.get(url, params).then((response)=>{
+    Axios.get(url, {params: params}).then((response)=>{
       resolve(response.data);
     }).catch((err)=>{
       reject(err)
