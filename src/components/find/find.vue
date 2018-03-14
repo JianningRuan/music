@@ -61,7 +61,14 @@
     filters: {},
     methods: {
       goDetail(item) {
-        console.log(item)
+        console.log(item);
+        let discParams = {
+          id: item.id
+        };
+        this.$router.push({
+          path: `/discDetail`,
+          query: discParams
+        })
       }
     }
   }

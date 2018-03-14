@@ -5,6 +5,8 @@ import music from '@/components/music/music'
 import find from '@/components/find/find'
 import findMy from '@/components/findMy/find-my'
 
+import discDetail from '@/components/discDetail/disc-detail'
+
 Vue.use(Router)
 
 export default new Router({
@@ -31,5 +33,9 @@ export default new Router({
         }
       ]
     },
+    {
+      path: '/discDetail',
+      component: discDetail
+    }
   ]
 })

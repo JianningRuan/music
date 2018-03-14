@@ -7,6 +7,7 @@ let Api = {
   getBanner: `/banner`,
   getPersonalized: `/personalized`,
   getRecommend: `/dj/recommend`,
-  getTopArtists: `/top/artists`
+  getTopArtists: `/top/artists`,
+  getPlaylistDetail: `/playlist/detail` // 歌单详情
 };
 export default Api;
