@@ -3,11 +3,12 @@
  */
 
 let state = {
-  playStyle: 1,
-  list: [],
+  playType: 1,
+  oriList: [],
   playList: [],
   play: false,
-  playIndex: 0
+  playIndex: 4,
+  currentSong: {}
 };
 
 export default state

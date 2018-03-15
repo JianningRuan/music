@@ -1,7 +1,7 @@
 <template>
   <div>
     <pageHead :title="title" :isShowTitBg="isShowTitBg"></pageHead>
-    <div class="disc-msg-wrapper">
+    <div class="disc-msg-wrapper" v-if="discDetail != {}">
       <div class="disc-msg flex">
         <div class="disc-pic">
           <img :src="discDetail.coverImgUrl"/>
@@ -10,9 +10,9 @@
           <div class="disc-name">{{discDetail.name}}</div>
           <div class="disc-creator flex">
             <span class="disc-creator-pic">
-              <img :src="discDetail.creator.avatarUrl"/>
+              <img v-if="discDetail && discDetail.creator" :src="discDetail.creator.avatarUrl"/>
             </span>
-            {{discDetail.creator.nickname}}
+            <span v-if="discDetail && discDetail.creator">{{discDetail.creator.nickname}}</span>
           </div>
         </div>
       </div>
@@ -30,6 +30,7 @@
 <script type="text/ecmascript-6">
   import './disc-detail.scss'
   import pageHead from './../../until/head/head'
+  import { mapMutations } from 'vuex'
   export default {
     data(){
       return {
@@ -64,8 +65,15 @@
     filters: {},
     methods: {
       goPlay(item, index) {
-        console.log(item, index)
-      }
+        console.log(item, index);
+        this.oriList(this.songList);
+        this.playIndex(index);
+      },
+      ...mapMutations({
+        oriList: 'SET_ORI_LIST',
+        playList: 'SET_PLAY_LIST',
+        playIndex: 'SET_PLAY_INDEX'
+      })
     }
   }
 </script>
