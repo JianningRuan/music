@@ -61,7 +61,6 @@
     filters: {},
     methods: {
       goDetail(item) {
-        console.log(item);
         let discParams = {
           id: item.id
         };

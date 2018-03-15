@@ -46,12 +46,10 @@
     },
     created(){
       this.id = this.$route.query.id;
-      console.log(this.id);
       let discParams = {
         id: this.id
       };
       this.$fetch(this.$Api.getPlaylistDetail, discParams).then((res)=>{
-        console.log(res);
         if (res.code == 200) {
           this.discDetail = res.result;
           this.songList = res.result.tracks;
