@@ -21,6 +21,9 @@ const mutations = {
   },
   [types.SET_CURRENT_SONG](state, currentSong){
     state.currentSong = currentSong
+  },
+  [types.SET_FULL_PAGE](state, fullPage){
+    state.fullPage = fullPage
   }
 };
 

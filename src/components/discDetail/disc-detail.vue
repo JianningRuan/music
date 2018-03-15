@@ -1,7 +1,7 @@
 <template>
   <div>
     <pageHead :title="title" :isShowTitBg="isShowTitBg"></pageHead>
-    <div class="disc-msg-wrapper" v-if="discDetail != {}">
+    <div class="disc-msg-wrapper">
       <div class="disc-msg flex">
         <div class="disc-pic">
           <img :src="discDetail.coverImgUrl"/>

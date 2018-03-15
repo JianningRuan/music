@@ -19,3 +19,5 @@ export const playIndex = state => state.playIndex;
 export const currentSong = (state)=>{
   return state.playList[state.playIndex] || {}
 };
+
+export const fullPage = state => state.fullPage;

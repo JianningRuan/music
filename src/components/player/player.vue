@@ -1,5 +1,7 @@
 <template>
-  <div>播放器{{playIndex}}</div>
+  <div>
+
+  </div>
 </template>
 <script type="text/ecmascript-6">
   import { mapGetters } from 'vuex'
