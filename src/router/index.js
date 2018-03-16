@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import music from '@/components/music/music'
 import find from '@/components/find/find'
 import findMy from '@/components/findMy/find-my'
+import findRadio from '@/components/findRadio/find-radio'
 
 import discDetail from '@/components/discDetail/disc-detail'
 
@@ -30,6 +31,10 @@ export default new Router({
         {
           path: 'findMy',
           component: findMy
+        },
+        {
+          path: 'findRadio',
+          component: findRadio
         }
       ]
     },

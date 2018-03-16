@@ -1,18 +1,18 @@
 <template>
-  <div>777</div>
+  <div>发现我的</div>
 </template>
 <script>
-        export default {
-                data() {
-                        return {}
-                },
-                components: {},
-                created() {
-                },
-                mounted() {
-                },
-                watch: {},
-                filters: {},
-                methods: {}
-        }
+  export default {
+    data() {
+      return {}
+    },
+    components: {},
+    created() {
+    },
+    mounted() {
+    },
+    watch: {},
+    filters: {},
+    methods: {}
+  }
 </script>

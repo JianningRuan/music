@@ -3,6 +3,7 @@
  */
 
 let state = {
+  showHead: true,
   playType: 1, // 播放类型
   oriList: [], // 原始列表
   playList: [], // 播放列表

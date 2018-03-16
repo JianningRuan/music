@@ -15,3 +15,11 @@ export function hasClass(el, className) {
   return (' ' + el.className + ' ').indexOf(' ' + className + ' ') > -1;
 }
 
+
+let song = {
+  id: '',
+  name: '',
+  artists: [{}],
+  album: {}
+}
+

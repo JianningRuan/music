@@ -1,6 +1,7 @@
 <template>
-  <div>
+  <div class="flex1 overflow-auto">
     <pageHead :title="title" :isShowTitBg="isShowTitBg"></pageHead>
+    <div class="top-header-mask"></div>
     <div class="disc-msg-wrapper">
       <div class="disc-msg flex">
         <div class="disc-pic">
@@ -31,6 +32,7 @@
   import './disc-detail.scss'
   import pageHead from './../../until/head/head'
   import { mapMutations } from 'vuex'
+  import { showHeadMinxin } from './../../js/mixin'
   export default {
     data(){
       return {
@@ -41,6 +43,7 @@
         songList: []
       }
     },
+    mixins: [ showHeadMinxin ],
     components: {
       pageHead
     },

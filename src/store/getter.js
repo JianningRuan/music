@@ -6,6 +6,8 @@
  return state.singer
  }*/
 
+export const showHead = state => state.showHead;
+
 export const playType = state => state.playType;
 
 export const oriList = state => state.oriList;

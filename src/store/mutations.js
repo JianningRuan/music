@@ -4,6 +4,9 @@
 import * as types from './mutations-type'
 
 const mutations = {
+  [types.SET_SHOW_HEAD](state, showHead) {
+    state.showHead = showHead
+  },
   [types.SET_PLAY_TYPE](state, playType){
     state.playType = playType
   },

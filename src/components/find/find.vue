@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex1 overflow-auto">
     <div class="banner" ref="banner">
       <mt-swipe :auto="4000">
         <mt-swipe-item v-for="bannerItem in banner" :key="bannerItem.targetId">
@@ -23,8 +23,21 @@
         </div>
       </div>
     </div>
-    <div>
-
+    <div class="box">
+      <div class="box-tit flex flex-align-center">
+        <span class="t-span"></span>
+        最新歌曲
+        <span class="arrow-icon iconfont"></span>
+      </div>
+      <div class="box-cont box-list-wrapper disc-wrapper">
+        <div class="disc-item" v-for="song in newSong" v-on:click="playSong(song)">
+          <div class="disc-pic">
+            <img :src="song.song.album.picUrl" />
+            <!--<div class="disc-l-num">{{}}</div>-->
+          </div>
+          <div class="disc-name">{{song.song.name}}</div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -34,7 +47,8 @@
     data() {
       return {
         banner: [],
-        disc: []
+        disc: [],
+        newSong: []
       }
     },
     components: {},
@@ -43,7 +57,7 @@
         if (res.code == 200) {
           this.banner = res.banners;
         }
-       });
+      });
 
       let getRecommendParams = {
         'offset': 0,
@@ -53,10 +67,20 @@
         if (res.code == 200) {
           this.disc = res.result;
         }
+      });
+      let newSongParams = {
+
+      };
+      this.$fetch(this.$Api.getNewSong).then((res)=>{
+        console.log(res);
+        if (res.code == 200) {
+          let result = res.result.slice(0,6);
+          this.newSong = result;
+          console.log(this.newSong)
+        }
       })
     },
-    mounted() {
-    },
+    mounted() {},
     watch: {},
     filters: {},
     methods: {

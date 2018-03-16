@@ -2,6 +2,8 @@
  * Created by Administrator on 2018/3/13.
  */
 
+export const SET_SHOW_HEAD = 'SET_SHOW_HEAD';
+
 export const SET_PLAY_TYPE = 'SET_PLAY_TYPE';
 
 export const SET_ORI_LIST = 'SET_ORI_LIST';
