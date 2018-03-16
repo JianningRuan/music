@@ -1,5 +1,5 @@
 <template>
-  <div>动态区</div>
+  <div>视频区</div>
 </template>
 <!--
     data(){

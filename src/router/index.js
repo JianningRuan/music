@@ -5,6 +5,8 @@ import music from '@/components/music/music'
 import find from '@/components/find/find'
 import findMy from '@/components/findMy/find-my'
 import findRadio from '@/components/findRadio/find-radio'
+import zone from '@/components/zone/zone'
+import video from '@/components/video/video'
 
 import discDetail from '@/components/discDetail/disc-detail'
 
@@ -37,6 +39,14 @@ export default new Router({
           component: findRadio
         }
       ]
+    },
+    {
+      path: '/video',
+      component: video
+    },
+    {
+      path: '/zone',
+      component: zone
     },
     {
       path: '/discDetail',

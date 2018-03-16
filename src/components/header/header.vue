@@ -4,7 +4,7 @@
       <a class="l-nav-btn iconfont icon-nav"></a>
     </div>
     <div class="h-nav-list flex1 flex justify-center">
-      <router-link class="h-nav" to="/">
+      <router-link class="h-nav" to="/video">
         <a class="iconfont icon-video"></a>
       </router-link>
       <router-link class="h-nav" to="/music">
