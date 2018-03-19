@@ -20,7 +20,7 @@
             </div>
           </div>
         </div>
-        <list :songList="songList" @clickIt="clickItem"/>
+        <list :songList="songList" @clickIt="clickIt"/>
       </div>
     </scroll>
   </div>
@@ -81,7 +81,7 @@
     computed:{},
     filters: {},
     methods: {
-      clickItem(index) {
+      clickIt(index) {
         let song = this.songList[index];
         this.oriList(this.songList);
         this.playIndex(index);
