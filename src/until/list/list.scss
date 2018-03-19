@@ -1,0 +1,39 @@
+
+
+.list {
+
+  .list-item {
+
+    .list-index {
+      width: 60px;
+      height:60px;
+      text-align: center;
+      line-height: 60px;
+      font-size: 24px;
+      color: #666;
+    }
+
+    .list-cont {
+      border-bottom: 1px solid #f3f3f3;
+
+      .list-name {
+        font-size: 16px;
+        color: #333;
+        font-weight: normal;
+      }
+      .list-artist {
+        font-size: 12px;
+        color: #999;
+      }
+    }
+
+    .list-opa {
+      border-bottom: 1px solid #f3f3f3;
+      width: 40px;
+      height: 60px;
+      text-align: center;
+      font-size: 20px;
+      color: #666;
+    }
+  }
+}

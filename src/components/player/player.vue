@@ -1,21 +1,29 @@
 <template>
-  <div>
-    <div class="player"></div>
-    <div class="mini-player"></div>
+  <div v-show="oriList.length">
+    <div class="player fullPage flex" v-if="fullPage">
+
+    </div>
+    <div class="mini-player" v-else>222</div>
   </div>
 </template>
 <script type="text/ecmascript-6">
-  import { mapGetters } from 'vuex'
+  import { mapGetters, mapMutations } from 'vuex'
   export default {
     data() {
-      return {}
+      return {
+
+      }
     },
     components: {},
     created() {
     },
     mounted() {
     },
-    watch: {},
+    watch: {
+      oriList(val) {
+
+      }
+    },
     computed: {
       ...mapGetters([
         'oriList',
@@ -23,6 +31,10 @@
       ])
     },
     filters: {},
-    methods: {}
+    methods: {
+      ...mapMutations({
+        fullPage: 'SET_FULL_PAGE'
+      })
+    }
   }
 </script>
