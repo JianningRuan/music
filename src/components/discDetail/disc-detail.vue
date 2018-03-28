@@ -5,13 +5,14 @@
     <scroll class="height" ref="scroll" :probeType="probeType" :listenScroll="listenScroll" @scroll="toScroll">
       <div>
         <div class="disc-msg-wrapper" ref="discMsgWrapper">
+          <div class="disc-bg" :style="{ backgroundImage: 'url(' + discDetail.coverImgUrl + ')'}"></div>
           <div class="disc-msg flex">
             <div class="disc-pic">
               <img :src="discDetail.coverImgUrl"/>
             </div>
             <div class="disc-msg-cont flex1">
               <div class="disc-name">{{discDetail.name}}</div>
-              <div class="disc-creator flex">
+              <div class="disc-creator flex flex-align-center">
             <span class="disc-creator-pic">
               <img v-if="discDetail && discDetail.creator" :src="discDetail.creator.avatarUrl"/>
             </span>

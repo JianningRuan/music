@@ -6,6 +6,7 @@
 
 .p-head {
   height: $headHeight;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
   .p-return {
     width: $headHeight;
@@ -14,7 +15,7 @@
     line-height: $headHeight;
     font-size: 24px;
     color: #fff;
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
   }
 }
 
@@ -25,10 +26,19 @@
 .cd {
 
   .disc-wrapper {
-    width: 70%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
     position: relative;
+    border-radius: 50%;
+    border: 10px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
 
     .disc {
       width: 100%;
@@ -37,14 +47,10 @@
       left: 0;
       overflow: hidden;
       border-radius: 50%;
-      border: 10px solid rgba(255, 255, 255, 0.5);
+      // border: 10px solid rgba(255, 255, 255, 0.5);
 
       &.rotate {
-        animation: rotate360 10s linear infinite;
-      }
-
-      img {
-        width: 100%;
+        animation: rotate360 30s linear infinite;
       }
     }
   }
@@ -56,4 +62,10 @@
   0% { transform: rotate(0deg)}
   50% { transform: rotate(180deg)}
   100% { transform: rotate(360deg)}
+}
+
+
+.mini-player {
+  background: #fff;
+  height: 60px;
 }
