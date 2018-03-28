@@ -83,9 +83,9 @@
     methods: {
       clickIt(index) {
         let song = this.songList[index];
-        this.oriList(this.songList);
-        this.playIndex(index);
-        this.fullPage(true);
+        this.setOriList(this.songList);
+        this.setPlayIndex(index);
+        this.setFullPage(true);
       },
       toScroll(state){
         let y = state.y;
@@ -95,10 +95,10 @@
         this.opacity = opacity;
       },
       ...mapMutations({
-        oriList: 'SET_ORI_LIST',
-        playList: 'SET_PLAY_LIST',
-        playIndex: 'SET_PLAY_INDEX',
-        fullPage: 'SET_FULL_PAGE'
+        setOriList: 'SET_ORI_LIST',
+        setPlayList: 'SET_PLAY_LIST',
+        setPlayIndex: 'SET_PLAY_INDEX',
+        setFullPage: 'SET_FULL_PAGE'
       })
     }
   }

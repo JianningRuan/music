@@ -1,0 +1,59 @@
+@import "./../../assets/style/variable";
+
+.player {
+  background: #333;
+}
+
+.p-head {
+  height: $headHeight;
+
+  .p-return {
+    width: $headHeight;
+    height:$headHeight;
+    text-align: center;
+    line-height: $headHeight;
+    font-size: 24px;
+    color: #fff;
+    transform: rotate(90deg);
+  }
+}
+
+.p-main {
+
+}
+
+.cd {
+
+  .disc-wrapper {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+    .disc {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      border-radius: 50%;
+      border: 10px solid rgba(255, 255, 255, 0.5);
+
+      &.rotate {
+        animation: rotate360 10s linear infinite;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.lrc {}
+
+@keyframes rotate360 {
+  0% { transform: rotate(0deg)}
+  50% { transform: rotate(180deg)}
+  100% { transform: rotate(360deg)}
+}
