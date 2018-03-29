@@ -5,13 +5,13 @@
     </div>
     <div class="h-nav-list flex1 flex justify-center">
       <router-link class="h-nav" to="/video">
-        <a class="iconfont icon-video"></a>
+        <div class="iconfont icon-video" :class="{active: currentTap == 0}" @click="clickTap(0)"></div>
       </router-link>
       <router-link class="h-nav" to="/music">
-        <a class="iconfont icon-music active"></a>
+        <div class="iconfont icon-music" :class="{active: currentTap == 1}" @click="clickTap(1)"></div>
       </router-link>
-      <router-link class="h-nav" to="/">
-        <a class="iconfont icon-zone"></a>
+      <router-link class="h-nav" to="/zone">
+        <div class="iconfont icon-zone" :class="{active: currentTap == 2}" @click="clickTap(2)"></div>
       </router-link>
     </div>
     <div class="search-btn iconfont icon-search"></div>
@@ -23,7 +23,7 @@
   export default {
     data(){
       return {
-
+        currentTap: 1
       }
     },
     components: {},

@@ -15,9 +15,18 @@
     border-bottom: 4px solid #fff;
     color: #333;
 
+    a {
+      display: block;
+      color: #333;
+    }
+
     &.active {
       border-bottom: 4px solid $bg;
       color: $bg;
+
+      a {
+        color: $bg;
+      }
     }
   }
 }

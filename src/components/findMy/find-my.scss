@@ -1,0 +1,71 @@
+@import "./../../assets/style/variable";
+
+.sys-box {
+
+  .sys-disc {
+
+    .s-disc-pic {
+      padding-top: 4px;
+      padding-bottom: 4px;
+      width: 26px;
+      height: 26px;
+      text-align: center;
+      line-height: 26px;
+      font-size: 22px;
+      margin-right: 20px;
+    }
+
+    .s-disc-cont {
+      line-height: 26px;
+      font-size: 16px;
+      color: #333;
+    }
+  }
+}
+
+.my-box {
+
+  .m-tit {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color: #666;
+    background: #ddd;
+  }
+
+  .m-cont {
+
+  }
+}
+
+.m-disc {
+
+  .m-disc-pic {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width: 50px;
+    height:50px;
+    margin-right: 20px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .m-disc-cont {
+    border-bottom: 1px solid $lineColor;
+
+    h2 {
+      font-size: 14px;
+      color: #666;
+      font-weight: normal;
+    }
+
+    p {
+      font-size: 12px;
+      color: #999;
+    }
+  }
+}

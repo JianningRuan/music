@@ -8,7 +8,7 @@
       </mt-swipe>
     </div>
     <div class="box">
-      <div class="box-tit flex flex-align-center">
+      <div class="box-tit flex flex-align-center" @click="goList('hot')">
         <span class="t-span"></span>
         推荐歌单
         <span class="arrow-icon iconfont"></span>
@@ -24,18 +24,17 @@
       </div>
     </div>
     <div class="box">
-      <div class="box-tit flex flex-align-center">
+      <div class="box-tit flex flex-align-center" @click="goList('new')">
         <span class="t-span"></span>
-        最新歌曲
+        新碟上架
         <span class="arrow-icon iconfont"></span>
       </div>
       <div class="box-cont box-list-wrapper disc-wrapper">
-        <div class="disc-item" v-for="song in newSong" v-on:click="playSong(song)">
+        <div class="disc-item" v-for="discItem in newDisc" v-on:click="goDetail(discItem)">
           <div class="disc-pic">
-            <img :src="song.song.album.picUrl" />
-            <!--<div class="disc-l-num">{{}}</div>-->
+            <img :src="discItem.blurPicUrl" />
           </div>
-          <div class="disc-name">{{song.song.name}}</div>
+          <div class="disc-name">{{discItem.name}}</div>
         </div>
       </div>
     </div>
@@ -48,7 +47,7 @@
       return {
         banner: [],
         disc: [],
-        newSong: []
+        newDisc: []
       }
     },
     components: {},
@@ -60,23 +59,22 @@
       });
 
       let getRecommendParams = {
-        'offset': 0,
-        'limit': 6
+        offset: 0,
+        limit: 6
       };
       this.$fetch(this.$Api.getPersonalized, getRecommendParams).then((res)=>{
         if (res.code == 200) {
           this.disc = res.result;
         }
       });
-      let newSongParams = {
 
+      let newDiscParams = {
+        offset: 0,
+        limit: 6
       };
-      this.$fetch(this.$Api.getNewSong).then((res)=>{
-        console.log(res);
+      this.$fetch(this.$Api.getTopAlbum, newDiscParams).then((res)=>{
         if (res.code == 200) {
-          let result = res.result.slice(0,6);
-          this.newSong = result;
-          console.log(this.newSong)
+          this.newDisc = res.albums;
         }
       })
     },
@@ -91,6 +89,15 @@
         this.$router.push({
           path: `/discDetail`,
           query: discParams
+        })
+      },
+      goList(val){
+        let typeParams = {
+          type: val
+        }
+        this.$router.push({
+          path: `/discList`,
+          query: typeParams
         })
       }
     }

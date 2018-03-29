@@ -8,6 +8,7 @@ import findRadio from '@/components/findRadio/find-radio'
 import zone from '@/components/zone/zone'
 import video from '@/components/video/video'
 
+import discList from '@/components/discList/disc-list'
 import discDetail from '@/components/discDetail/disc-detail'
 
 Vue.use(Router)
@@ -47,6 +48,10 @@ export default new Router({
     {
       path: '/zone',
       component: zone
+    },
+    {
+      path: '/discList',
+      component: discList
     },
     {
       path: '/discDetail',

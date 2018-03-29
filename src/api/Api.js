@@ -9,6 +9,8 @@ let Api = {
   getRecommend: `/dj/recommend`,
   getTopArtists: `/top/artists`,
   getPlaylistDetail: `/playlist/detail`, // 歌单详情
-  getNewSong: `/personalized/newsong`
+  getNewSong: `/personalized/newsong`,
+  getTopAlbum: `/top/album`, // 新碟上架
+  getTopPlaylist: `/top/playlist` // 歌单 ( 网友精选碟 )
 };
 export default Api;
