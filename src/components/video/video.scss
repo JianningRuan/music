@@ -1,0 +1,62 @@
+@import "./../../assets/style/variable";
+
+.mv-item {
+  width: 100%;
+
+  .mv-pic {
+    width: 100%;
+    position: relative;
+
+    .play-icon {
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -30px;
+      margin-left: -30px;
+      text-align: center;
+      line-height: 60px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .mv-cont {
+    height: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .mv-name {
+      color: $titColor;
+
+      h2 {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: normal;
+      }
+    }
+
+    .mv-opa {
+      width: 60px;
+      height: 60px;
+
+      .like-icon {
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        font-size: 22px;
+      }
+
+      .like-num {
+        text-align: center;
+        line-height: 18px;
+        font-size: 12px;
+        color: #666;
+      }
+    }
+  }
+}

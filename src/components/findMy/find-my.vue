@@ -2,9 +2,21 @@
   <div class="flex1 overflow-auto">
 
     <div class="sys-box">
-      <div class="sys-disc">
-        <div class="s-disc-pic"></div>
+      <div class="sys-disc flex">
+        <div class="s-disc-pic iconfont icon-icon-0"></div>
         <div class="s-disc-cont flex1">本地音乐</div>
+      </div>
+      <div class="sys-disc flex">
+        <div class="s-disc-pic iconfont icon-icon-4"></div>
+        <div class="s-disc-cont flex1">最近播放</div>
+      </div>
+      <div class="sys-disc flex">
+        <div class="s-disc-pic iconfont icon-icon-2"></div>
+        <div class="s-disc-cont flex1">我的电台</div>
+      </div>
+      <div class="sys-disc flex">
+        <div class="s-disc-pic iconfont icon-icon-3"></div>
+        <div class="s-disc-cont flex1">我的收藏</div>
       </div>
     </div>
 

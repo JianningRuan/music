@@ -5,20 +5,22 @@
   .sys-disc {
 
     .s-disc-pic {
-      padding-top: 4px;
-      padding-bottom: 4px;
-      width: 26px;
-      height: 26px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      width: 30px;
+      height: 30px;
       text-align: center;
       line-height: 26px;
-      font-size: 22px;
-      margin-right: 20px;
+      font-size: 24px;
+      margin-right: 10px;
+      color: $bg;
     }
 
     .s-disc-cont {
-      line-height: 26px;
+      line-height: 50px;
       font-size: 16px;
       color: #333;
+      border-bottom: 1px solid $lineColor;
     }
   }
 }
@@ -32,7 +34,7 @@
     line-height: 30px;
     font-size: 12px;
     color: #666;
-    background: #ddd;
+    background: #eee;
   }
 
   .m-cont {

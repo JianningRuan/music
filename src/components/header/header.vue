@@ -31,6 +31,10 @@
     mounted(){},
     watch: {},
     filters: {},
-    methods: {}
+    methods: {
+      clickTap(val) {
+        this.currentTap = val;
+      }
+    }
   }
 </script>

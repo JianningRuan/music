@@ -6,13 +6,13 @@
 
   .nav-item {
     width: 70px;
-    height: 36px;
+    height: 38px;
     margin-left: 20px;
     margin-right: 20px;
     text-align: center;
-    line-height: 36px;
+    line-height: 38px;
     font-size: 15px;
-    border-bottom: 4px solid #fff;
+    border-bottom: 2px solid #fff;
     color: #333;
 
     a {
@@ -21,7 +21,7 @@
     }
 
     &.active {
-      border-bottom: 4px solid $bg;
+      border-bottom: 2px solid $bg;
       color: $bg;
 
       a {
