@@ -6,8 +6,6 @@ export const SET_SHOW_HEAD = 'SET_SHOW_HEAD';
 
 export const SET_PLAY_TYPE = 'SET_PLAY_TYPE';
 
-export const SET_ORI_LIST = 'SET_ORI_LIST';
-
 export const SET_PLAY_LIST = 'SET_PLAY_LIST';
 
 export const SET_PLAY = 'SET_PLAY';

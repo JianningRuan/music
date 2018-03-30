@@ -7,6 +7,7 @@ import findMy from '@/components/findMy/find-my'
 import findRadio from '@/components/findRadio/find-radio'
 import zone from '@/components/zone/zone'
 import video from '@/components/video/video'
+import videoPlay from '@/components/videoPlay/video-play'
 
 import discList from '@/components/discList/disc-list'
 import discDetail from '@/components/discDetail/disc-detail'
@@ -44,6 +45,10 @@ export default new Router({
     {
       path: '/video',
       component: video
+    },
+    {
+      path: '/videoPlay',
+      component: videoPlay
     },
     {
       path: '/zone',

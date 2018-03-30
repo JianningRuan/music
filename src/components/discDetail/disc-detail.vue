@@ -84,7 +84,7 @@
     methods: {
       clickIt(index) {
         let song = this.songList[index];
-        this.setOriList(this.songList);
+        this.setPlayList(this.songList);
         this.setPlayIndex(index);
         this.setFullPage(true);
       },
@@ -96,7 +96,6 @@
         this.opacity = opacity;
       },
       ...mapMutations({
-        setOriList: 'SET_ORI_LIST',
         setPlayList: 'SET_PLAY_LIST',
         setPlayIndex: 'SET_PLAY_INDEX',
         setFullPage: 'SET_FULL_PAGE'

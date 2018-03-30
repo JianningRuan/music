@@ -10,9 +10,6 @@ const mutations = {
   [types.SET_PLAY_TYPE](state, playType){
     state.playType = playType
   },
-  [types.SET_ORI_LIST](state, oriList){
-    state.oriList = oriList
-  },
   [types.SET_PLAY_LIST](state, playList){
     state.playList = playList
   },

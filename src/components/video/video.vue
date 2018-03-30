@@ -2,17 +2,17 @@
   <div class="main flex1 flex flex-c">
     <div class="mv-nav-list"></div>
     <div class="flex1 overflow-auto">
-      <div class="mv-item" v-for="mv in videoList">
+      <div class="mv-item" v-for="mv in videoList" @click="goDetail(mv)">
         <div class="mv-pic">
           <img :src="mv.cover" />
-          <div class="play-icon"></div>
+          <div class="play-icon iconfont icon-play"></div>
         </div>
         <div class="mv-cont flex">
           <div class="mv-name flex1 flex-align-center">
             <h2>{{mv.name}}</h2>
           </div>
-          <div class="mv-opa justify-center flex-align-center">
-            <span class="like-icon"></span>
+          <div class="mv-opa flex justify-center flex-align-center">
+            <span class="like-icon iconfont icon-like"></span>
             <span class="like-num">{{mv.playCount}}</span>
           </div>
         </div>
@@ -41,7 +41,18 @@
     watch: {},
     computed:{},
     filters: {},
-    methods: {}
+    methods: {
+      goDetail(mv){
+        console.log(mv);
+        let mvParams = {
+          id: mv.id
+        };
+        this.$router.push({
+          path: '/videoPlay',
+          query: mvParams
+        })
+      }
+    }
   }
 </script>
 <!--

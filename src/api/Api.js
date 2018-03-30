@@ -12,6 +12,10 @@ let Api = {
   getNewSong: `/personalized/newsong`,
   getTopAlbum: `/top/album`, // 新碟上架
   getTopPlaylist: `/top/playlist`, // 歌单 ( 网友精选碟 )
-  getMVList: `/mv/first` // mv列表
+  getMVList: `/mv/first`, // mv列表
+  getMV: `/mv`, // 获取 mv 数据
+  getMVUrl: `/mv/url`, // 播放mv
+  getPersonalizedMv: `/personalized/mv`, // 推荐mv
+  getCommentMv: `/comment/mv` // 评论mv
 };
 export default Api;
