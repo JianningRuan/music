@@ -8,10 +8,10 @@
           <div class="play-icon iconfont icon-play"></div>
         </div>
         <div class="mv-cont flex">
-          <div class="mv-name flex1 flex-align-center">
+          <div class="mv-name flex1 flex flex-align-center">
             <h2>{{mv.name}}</h2>
           </div>
-          <div class="mv-opa flex justify-center flex-align-center">
+          <div class="mv-opa flex flex-c justify-center flex-align-center">
             <span class="like-icon iconfont icon-like"></span>
             <span class="like-num">{{mv.playCount}}</span>
           </div>

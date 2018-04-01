@@ -5,7 +5,8 @@
 
   .mv-pic {
     width: 100%;
-    min-height: 120px;
+    height: 180px;
+    overflow: hidden;
     position: relative;
 
     .play-icon {
@@ -17,11 +18,17 @@
       margin-top: -30px;
       margin-left: -30px;
       text-align: center;
-      line-height: 60px;
+      line-height: 58px;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.3);
-      color: $titColor;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid #fff;
+      color: rgba(255, 255, 255, 0.6);
+      box-sizing: border-box;
       font-size: 30px;
+
+      &:before {
+        margin-left: 4px;
+      }
     }
 
     img {

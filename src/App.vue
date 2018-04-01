@@ -1,7 +1,9 @@
 <template>
   <div id="app" class="flex flex-c">
     <mHeader v-if="showHead"></mHeader>
+    <transition name="slide" mode="out-in">
     <router-view/>
+    </transition>
     <player></player>
   </div>
 </template>

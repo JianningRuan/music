@@ -45,8 +45,8 @@
         <div class="m-name">{{currentSong.name}}</div>
         <div class="m-artists" v-if="currentSong.album && currentSong.album.artists">{{currentSong.album.artists[0].name}}</div>
       </div>
-      <div class="mini-opa-btn play-icon iconfont icon-play" @click="playOrStop"></div>
-      <div class="mini-opa-btn next-icon iconfont icon-next" @click="nextSong"></div>
+      <div class="mini-opa-btn play-icon iconfont" :class="isPlaying" @click.stop="playOrStop"></div>
+      <div class="mini-opa-btn next-icon iconfont icon-next" @click.stop="nextSong"></div>
     </div>
     <audio ref="audio" :src="songUrl" @canplay="ready" @timeupdate="updateTime" @ended="end"></audio>
   </div>
@@ -150,6 +150,7 @@
         if (playIndex === 0) {
           return
         }
+        this.setPlay(false);
         playIndex--;
         this.setPlayIndex(playIndex);
         this.loadReady = false;
@@ -158,6 +159,7 @@
         if (!this.loadReady) {
           return
         }
+        this.setPlay(false);
         let playIndex = this.playIndex;
         if (playIndex === this.playList.length -1) {
           this.setPlayIndex(0)

@@ -1,5 +1,5 @@
 <template>
-  <div>动态区</div>
+  <div class="flex1 overflow-auto">动态区</div>
 </template>
 <!--
     data(){

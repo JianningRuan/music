@@ -63,6 +63,8 @@
 
   // 进度条
   .p-progress {
+    padding-right: 10px;
+    padding-left: 10px;
 
     .p-time {
       width: 50px;
@@ -179,7 +181,7 @@
     height: 40px;
     text-align: center;
     line-height: 40px;
-    font-size: 28px;
+    font-size: 22px;
     color: #999;
     margin-left: 10px;
   }
