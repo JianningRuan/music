@@ -30,7 +30,7 @@
     },
     created(){
       this.type = this.$route.query.type;
-      if (this.type == 'hot') {
+      if (this.type === 'hot') {
         this.title = '推荐歌单'
       }else {
         this.title = '新碟上架';
@@ -50,7 +50,7 @@
           limit: 30
         };
         this.$fetch(this.$Api.getPersonalized, getRecommendParams).then((res)=>{
-          if (res.code == 200) {
+          if (res.code === 200) {
             this.discList = this.discList.concat(res.result);
             this.total = res.total;
             this.offset++;
@@ -65,7 +65,7 @@
           limit: 30
         };
         this.$fetch(this.$Api.getTopAlbum, newDiscParams).then((res)=>{
-          if (res.code == 200) {
+          if (res.code === 200) {
             this.discList = this.discList.concat(res.albums);
             this.total = res.total;
             this.offset++;
@@ -79,7 +79,7 @@
         if (this.total !== 0 && this.offset * 30 >= this.total) {
           return
         }
-        if (this.type == 'hot') {
+        if (this.type === 'hot') {
           this.getDiscList();
         }else {
           this.getNewDiscList();

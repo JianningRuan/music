@@ -60,7 +60,7 @@
         id: this.id
       };
       this.$fetch(this.$Api.getPlaylistDetail, discParams).then((res)=>{
-        if (res.code == 200) {
+        if (res.code === 200) {
           this.discDetail = res.result;
           let songList = [];
           res.result.tracks.map((item)=>{
