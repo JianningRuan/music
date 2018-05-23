@@ -53,7 +53,7 @@
     components: {},
     created() {
       this.$fetch(this.$Api.getBanner).then((res)=>{
-        if (res.code == 200) {
+        if (res.code === 200) {
           this.banner = res.banners;
         }
       });
@@ -63,7 +63,7 @@
         limit: 6
       };
       this.$fetch(this.$Api.getPersonalized, getRecommendParams).then((res)=>{
-        if (res.code == 200) {
+        if (res.code === 200) {
           this.disc = res.result;
         }
       });
@@ -73,7 +73,7 @@
         limit: 6
       };
       this.$fetch(this.$Api.getTopAlbum, newDiscParams).then((res)=>{
-        if (res.code == 200) {
+        if (res.code === 200) {
           this.newDisc = res.albums;
         }
       })
@@ -94,7 +94,7 @@
       goList(val){
         let typeParams = {
           type: val
-        }
+        };
         this.$router.push({
           path: `/discList`,
           query: typeParams

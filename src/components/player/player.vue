@@ -75,12 +75,10 @@
     },
     watch: {
       currentSong(val){
-        console.log('surrent:', val);
         if (val !== {}) {
           this.songUrl = `http://music.163.com/song/media/outer/url?id=${val.id}.mp3`;
           this.$nextTick(()=>{
             this.setPlay(true);
-            // this.audio.play();
           })
 
         }
@@ -89,9 +87,6 @@
         this.$nextTick(()=>{
           this.discHeight = this.$refs.discBox.offsetWidth;
         });
-
-        console.log('list:', val);
-        // this.setPlayList(val);
       },
       play(val) {
         if (val) {
@@ -99,9 +94,6 @@
         }else {
           this.stopMusic();
         }
-      },
-      playIndex(val) {
-        console.log('index:', val)
       }
     },
     computed: {

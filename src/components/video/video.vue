@@ -31,7 +31,7 @@
     components: {},
     created(){
       this.$fetch(this.$Api.getMVList).then((res)=>{
-        if (res.code == 200) {
+        if (res.code === 200) {
           this.videoList = res.data;
         }
       })
@@ -43,7 +43,6 @@
     filters: {},
     methods: {
       goDetail(mv){
-        console.log(mv);
         let mvParams = {
           id: mv.id
         };

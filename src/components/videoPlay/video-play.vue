@@ -89,7 +89,6 @@
           mvid: this.mvId
         };
         this.$fetch(this.$Api.getMV, mvParams).then((res)=>{
-          console.log(res);
           if (res.code === 200) {
             this.mv = res.data;
             this.mvUrl = `http://localhost:3000/mv/url?url=${this.mv.brs[480]}`;
@@ -97,7 +96,6 @@
             let mvUrlParams = {
               url: this.mv.brs[480]
             };
-            console.log(mvUrlParams);
             this.$fetch(this.$Api.getMVUrl, mvUrlParams).then((res)=>{
               console.log(res)
             })
@@ -109,7 +107,6 @@
           id: this.mvId
         };
         this.$fetch(this.$Api.getCommentMv, mvIdParams).then((res)=>{
-          console.log('pl:', res);
           if (res.code === 200) {
             this.commentList = res.comments;
           }
