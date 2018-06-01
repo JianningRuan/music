@@ -69,6 +69,7 @@
     created() {
       this.$nextTick(()=>{
         this.audio = this.$refs.audio;
+        this.audio.volume = 0.2; // 音量
       })
     },
     mounted() {
@@ -80,7 +81,6 @@
           this.$nextTick(()=>{
             this.setPlay(true);
           })
-
         }
       },
       playList(val) {

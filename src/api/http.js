@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { Indicator } from 'mint-ui';
 // import qs from 'qs-component'
 import router from '../router'
 
@@ -29,6 +30,7 @@ if (process.env.NODE_ENV == 'development') {
 //POST传参序列化(添加请求拦截器)
 Axios.interceptors.request.use((config)=>{
   // 可以加载loading
+  Indicator.open('加载中...');
   /*console.log(config);
   if (config.method === "post" || config.method === "put" || config.method === "delete" ){
     // 序列化
@@ -40,6 +42,7 @@ Axios.interceptors.request.use((config)=>{
 //返回状态判断(添加响应拦截器)
 Axios.interceptors.response.use((res)=>{
   // 可在此去掉loading
+  Indicator.close();
   console.log(res);
   //对响应数据做些事
   //可弹窗提示错误信息
