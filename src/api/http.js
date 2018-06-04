@@ -19,12 +19,12 @@ const Axios = axios.create({
   }
 });
 
-if (process.env.NODE_ENV == 'development') {
+if (process.env.NODE_ENV === 'development') {
   Axios.defaults.baseURL = 'http://localhost:3000';
-} else if (process.env.NODE_ENV == 'debug') {
-  Axios.defaults.baseURL = 'http://localhost:3000';
-} else if (process.env.NODE_ENV == 'production') {
-  Axios.defaults.baseURL = 'http://localhost:3000';
+} else if (process.env.NODE_ENV === 'debug') {
+  Axios.defaults.baseURL = 'http://47.104.232.7:3000';
+} else if (process.env.NODE_ENV === 'production') {
+  Axios.defaults.baseURL = 'http://47.104.232.7:3000';
 }
 
 //POST传参序列化(添加请求拦截器)
