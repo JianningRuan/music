@@ -2,7 +2,7 @@
   <div class="flex1 overflow-auto">
     <div class="banner" ref="banner">
       <mt-swipe :auto="4000">
-        <mt-swipe-item v-for="bannerItem in banner" :key="bannerItem.targetId">
+        <mt-swipe-item v-for="bannerItem in banner" :key="bannerItem.picUrl">
           <img ref="bannerImg" :src="bannerItem.picUrl" />
         </mt-swipe-item>
       </mt-swipe>

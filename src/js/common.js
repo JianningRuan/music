@@ -19,9 +19,12 @@ export function getSongMsg(item) {
   let song = {
     id: item.id,
     name: item.name,
-    artists: item.artists,
+    artists: item.ar,
+    album: item.al,
+    duration: item.dt
+    /*artists: item.artists,
     album: item.album,
-    duration: item.duration
+    duration: item.duration*/
   };
   return song
 }

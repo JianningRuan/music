@@ -125,7 +125,7 @@
       },
       updateTime(e){
         this.currentTime = e.target.currentTime;
-        this.percent = this.currentTime * 1000 / this.currentSong.duration * 100;
+        this.percent = (this.currentTime * 1000 / this.currentSong.duration) * 100;
       },
       end(){
         this.nextSong();

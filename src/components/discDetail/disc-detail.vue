@@ -61,9 +61,9 @@
       };
       this.$fetch(this.$Api.getPlaylistDetail, discParams).then((res)=>{
         if (res.code === 200) {
-          this.discDetail = res.result;
+          this.discDetail = res.playlist;
           let songList = [];
-          res.result.tracks.map((item)=>{
+          res.playlist.tracks.map((item)=>{
             let song = getSongMsg(item);
             songList.push(song);
           });
