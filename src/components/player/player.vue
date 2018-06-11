@@ -48,7 +48,7 @@
       <div class="mini-opa-btn play-icon iconfont" :class="isPlaying" @click.stop="playOrStop"></div>
       <div class="mini-opa-btn next-icon iconfont icon-next" @click.stop="nextSong"></div>
     </div>
-    <audio ref="audio" :src="songUrl" @canplay="ready" @timeupdate="updateTime" @ended="end"></audio>
+    <audio ref="audio" :src="songUrl" @canplay="ready" @timeupdate="updateTime" @ended="end" @error="error"></audio>
   </div>
 </template>
 <script type="text/ecmascript-6">
@@ -129,6 +129,13 @@
       },
       end(){
         this.nextSong();
+      },
+      //加载出错时
+      error(){
+        this.loadReady = true;
+        if (this.playList.length){
+          this.nextSong();
+        }
       },
       playOrStop(){
         let play = !this.play;

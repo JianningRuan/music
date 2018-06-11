@@ -58,7 +58,7 @@
         order: 'new'
       };
       this.$fetch(this.$Api.getTopPlaylist, discParams).then((res)=>{
-        if (res.code == 200){
+        if (res.code === 200){
           this.collectionDisc = res.playlists;
         }
       })
